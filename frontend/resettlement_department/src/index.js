@@ -11,8 +11,8 @@ import MessageTable from "./Test";
 const rootElement = document.getElementById("root");
 const root = ReactDOM.createRoot(rootElement); 
 
-export const HOSTLINK = process.env.REACT_APP_HOST_LINK;
-export const ASIDELINK = process.env.REACT_APP_REACT_LINK;
+export const HOSTLINK = 'http://localhost:8000';
+export const ASIDELINK = 'http://localhost:3000';
 
 root.render(
   <BrowserRouter>

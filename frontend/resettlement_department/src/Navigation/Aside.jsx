@@ -8,7 +8,6 @@ export default function Aside() {
       <nav className="items-centergap-4 flex flex-col gap-2">
         <LinkButton name="aparts" />
         <LinkButton name="balance" />
-        <UpdateDataButton />
       </nav>
     </aside>
   );
