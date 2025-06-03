@@ -59,7 +59,7 @@ const ApartTable = ({ data, loading, selectedRow, setSelectedRow, isDetailsVisib
   const [maxPeople, setMaxPeople] = useState([]);
   const [filterStatuses, setFilterStatuses] = useState([]);
 
-  const statuses = apartType === 'OldApart' ? ["Согласие", "Суд", "МФР Компенсация", "МФР Докупка", "Ожидание", "Ждёт одобрения", "МФР (вне района)", "МФР Компенсация (вне района)"] : ["Резерв", "Блок", "Свободная"];
+  const statuses = apartType === 'OldApart' ? [ "Ждёт одобрения", "Ожидание", "Согласие", "Отказ"] : ["Свободная"];
   
   // Получаем уникальные значения room_count
   const getUniqueValues = useMemo(() => {

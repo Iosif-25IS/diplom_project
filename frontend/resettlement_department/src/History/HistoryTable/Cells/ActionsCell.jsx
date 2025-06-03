@@ -173,8 +173,8 @@ export default function ActionsCell( {props, setData}) {
       <div className="flex w-full flex-row items-center justify-start gap-1">
         <div className="flex flex-1 justify-around">
           <Button
-            name="Скачать"
-            func={() => setShowDownloadOptions(true)}
+            name="Скачать баланс"
+            func={() => download_balance(value.history_id)}
           />
           {value.status_id === 1 ? (
             <Button name="Одобрено" isDisabled={true} />
@@ -182,13 +182,9 @@ export default function ActionsCell( {props, setData}) {
             <Button name="Одобрить" func={() => approve_history(value.history_id)} />
           )}
           {value.status_id === 1 ? (
-            value.is_downloaded ? (
-              <Button name="Контейнер загружен" isDisabled={true} />
-            ) : (
-              <Button name="Загрузить контейнер" />
-            )
+            <Button name="Отменить" isDisabled={true} />
           ) : (
-            <Button name="Отменить" func={() => delete_history(value.history_id) }/>
+            <Button name="Отменить" func={() => delete_history(value.history_id)} />
           )}
         </div>
       </div>
